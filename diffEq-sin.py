@@ -5,10 +5,10 @@ from ezGraph import *
 
 
 #initialization
-dx = 0.1
+dx = .1
 x=0
-y=4    
-nsteps = 50
+y=0    
+nsteps = 100
 
 # Graph
 graph = ezGraph(xmin=0, xmax=100, ymin = 0, ymax=20, xLabel="x", yLabel="y")
@@ -18,7 +18,7 @@ graph.add(0,y) #add
 
 for i in range(nsteps):
     x = x + dx
-    slope = x/5
+    slope = np.sin(x)
     dy = slope * dx
     y = y + dy
     print(x,y)
